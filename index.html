@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Tibo De Clercq </title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+<!--  
+  _______ __             ____          ________                    
+ /_  __(_) /_  ____     / __ \___     / ____/ /__  ______________ _
+  / / / / __ \/ __ \   / / / / _ \   / /   / / _ \/ ___/ ___/ __ `/
+ / / / / /_/ / /_/ /  / /_/ /  __/  / /___/ /  __/ /  / /__/ /_/ / 
+/_/ /_/_.___/\____/  /_____/\___/   \____/_/\___/_/   \___/\__, /  
+                                                             /_/   
+
+hallo :)                                              -->
+
+<div class="container1">
+  <h1>Tibo De Clercq</h1>
+  <div id="bio">
+    <i>Scroll naar beneden en beweeg met je muis van links naar rechts over de witte toetsen</i>  
+  </div>
+  <div class="synth">
+    
+    <div class="touch-move-scroll-blocker"></div>
+    
+    <div class="modules">
+      
+      <div class="module osc">
+        <div class="slider waveform">
+          <span class="label">Osc</span>
+          <input type="range" id="osc-shape" min="0" max="3" step="1" value="4" />                    
+        </div>
+      </div>
+      
+      
+      <div class="module lpf">
+        <div class="slider">
+          <span class="label">Freq</span>
+          <input type="range" id="lpf-freq" min="0" max="1" step=".05" value=".7" />
+        </div>
+        
+        
+        <div class="slider">
+          <span class="label">Resolution</span>
+          <input type="range" id="lpf-res" min="0" max="1" step=".01" value=".4" />
+        </div>
+        
+      </div>
+      
+      <div class="module env">
+        
+        <div class="slider">
+          <span class="label">Attack</span>
+          <input type="range" id="env-attack" min="0.0" max="3.0" step=".01" value="0.2" />
+        </div>
+        
+        <div class="slider">
+          <span class="label">Decay</span>
+          <input type="range" id="env-decay" min="0.0" max="3.0" step=".01" value="3.0" />
+        </div>
+        
+        <div class="slider">
+          <span class="label">Sustain</span>
+          <input type="range" id="env-sustain" min="0.0" max="1.0" step=".01" value="1.0" />
+        </div>
+        
+        <div class="slider">
+          <span class="label">Release</span>
+          <input type="range" id="env-release" min="0.0" max="3.0" step=".01" value="1.0" />
+        </div>
+        
+        <div class="slider">
+          <span class="label">Octave</span>
+          <input type="range" id="osc-octave" min="0" max="6" step="1" value="3" />
+        </div>
+        
+        <div class="slider">
+          <span class="label">Glide</span>
+          <input type="range" id="osc-portamento" min="0" max="1" step="0.1" value="1" />
+        </div>
+        
+      </div>              
+      
+    </div>
+    
+    
+    <div id="piano-keys">
+      
+      <!--OCTAVE 1--> 
+      <!--<div class="octave1">-->
+        <div class="key" id="natural" onclick="playC1(this)" data-octaveSet="0" onmouseover="onC1(this)" onmouseout="offC1(this)" >
+          <div class="key" id="sharp" data-note="C#" data-octaveSet="0"></div>
+        </div>
+      
+        <div class="key" id="natural" onclick="playD1(this)" data-note="D" onmouseover="onD1(this)" onmouseout="offD1(this)">
+          <div class="key" id="sharp" data-note="D#"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playE1(this)"  data-note="E" onmouseover="onE1(this)" onmouseout="offE1(this)"></div>
+        
+        <div class="key" id="natural" onclick="playF1(this)"  data-note="F" onmouseover="onF1(this)" onmouseout="offF1(this)">
+          <div class="key" id="sharp" data-note="F#"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playG1(this)" data-note="G" onmouseover="onG1(this)" onmouseout="offG1(this)">
+          <div class="key" id="sharp" data-note="G#"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playA1(this)" data-note="A" onmouseover="onA1(this)" onmouseout="offA1(this)">
+          <div class="key" id="sharp"  data-note="A#"></div>
+          
+        </div>
+        <div class="key" id="natural" onclick="playB1(this)" data-note="B" onmouseover="onB1(this)" onmouseout="offB1(this)"></div>
+      <!--</div>-->
+      
+      <!--OCTAVE 2-->
+      <!--<div class="octave2">-->
+        <div class="key" id="natural" onclick="playC2(this)" data-note="Cb" data-octave="1" onmouseover="onC2(this)" onmouseout="offC2(this)">
+          <div class="key" id="sharp" data-note="C#b" data-octave="1"></div>
+        </div>
+        
+        <div class="key jazz" id="natural" data-note="Db" onclick="playD2(this)" onmouseover="onD2(this)" onmouseout="offD2(this)">
+          <div class="key" id="sharp" data-note="D#b"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playE2(this)" data-note="Eb" onmouseover="onE2(this)" onmouseout="offE2(this)"></div>
+        
+        <div class="key" id="natural" onclick="playF2(this)" data-note="Fb"onmouseover="onF2(this)" onmouseout="offF2(this)">
+          <div class="key" id="sharp" data-note="F#b"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playG2(this)" data-note="Gb" onmouseover="onG2(this)" onmouseout="offG2(this)">
+          <div class="key" id="sharp" data-note="G#b"></div>
+        </div>
+        
+        <div class="key zappa" id="natural"  data-note="Ab" onclick="playvideo(this)" onmouseover="onA2(this)" onmouseout="offA2(this)">
+          <div class="key" id="sharp"  data-note="A#b"></div>
+        </div>
+        
+        <div class="key" id="natural" onclick="playB2(this)" data-note="Bb" onmouseover="onB2(this)" onmouseout="offB2(this)"></div>
+      <!--</div>-->
+
+      
+    </div> 
+
+    <div class="vragen" id="vraag1">
+      <h2>Wat is dit?</h2>
+      
+      <p>Deze website is mijn portfolio. Hier beantwoord ik een aantal vragen over mezelf en kom je meer te weten over wie ik ben.
+      De vragen verschijnen als je met je muis over de witte toetsen heen beweegt. Wanneer je op een toets klikt, zal er een geluid of video afspelen.</p> <p>Deze website is gemaakt voor grotere schermen. Je kan naar beneden scrollen om de volledige teksten te lezen. Ik heb ook een uitgeschreven versie van dit portfolio waarin ik grondiger antwoord geef op de vragen.</p>
+      <p><i>Attesten, Flyers, foto's en opnames zijn beschikbaar bij mijn inzending.</i></p>
+    </div>
+
+    <div class="vragen" id="vraag2">
+      <h2>Wie ben jij?</h2>
+      <p>Mijn naam is <b>Tibo</b>. Ik ben geboren in Leuven en groeide op in het dorp Lubbeek. In mijn vrije tijd speel ik piano <i>(meer informatie hierover volgt)</i>. Daarnaast ben ik tot vandaag actief als scoutsleider bij de scouts van Sint-Martinus Lubbeek en heb ik ervaring met het organiseren van evenementen zoals fuiven, eetfestijnen en kampen. </p>
+      <p>In Januari 2021 begon ik te werken als <i>Cloud engineer</i> voor het bedrijf Riskconcile. Dit bedrijf ontwikkelt technologische oplossingen voor de financiële sector (Banken, Hedge Funds, verzekeraars,... ). Ik beveilig en onderhoud hun Cloud infrastructuur. </p>
+      <p><b>Weetje over mezelf:</b><br>Mijn ouders zijn enorme fans van Arno Hintjens. Bij mijn geboorte hebben ze lang getwijfeld om me te noemen naar deze Belgische zanger.</p>
+    </div>
+        
+    <div class="vragen" id="vraag3">
+      <h2>Welke instrumenten bespeel je?</h2> 
+      <p>Op mijn 8 jaar ben ik begonnen met piano te spelen. Ik leerde akkoorden vormen en speelde eenvoudige stukken uit oefenboeken. De eerste muziek dat ik speelde was de filmmuziek van <b>John Williams</b>. Later speelde ik covers van popmuziek en minimalistische pianomuziek in gelijkaardige stijl als die van <b>Philip Glass</b>.</p>
+      <p>Ik zou mijn verzameling instrumenten willen uitbreiden met een aantal keyboards en synthesizers (Nord Stage 3, Moog Subsequent 37, Teenage engineering OP-1, ...). Jammer genoeg zijn deze instrumenten duur en zijn VST plugins een goed alternatief. </p>
+      <img src="piano-foto.png"/>
+    </div>
+  
+  <div class="vragen" id="vraag4">
+    <h2>Welke opleiding heb je gevolgd?</h2>
+      <img src="maarten.webp">
+      <p>Van mijn 7 tot 11 jaar volgende ik notenleer aan de muziekacademie in Lubbeek. Na één jaar noteleer te hebben gevolgd, mocht ik beginnen met een instrument en heb ik gekozen voor <b>piano</b>. In de bijlages vind je een aantal attesten terug.</p><br>
+      <p>Rond mijn 15 jaar leerde ik een aantal vrienden kennen die hun eigen muziek maakte en deelde op SoundCloud. Ik kreeg intresse om ook mijn eigen muziek te maken en kocht met wat spaargeld een launchpad (soort drumcomputer). Hierbij kwam een gratis versie van de software <b>Ableton</b>. Vervolgens heb ik op het internet via verschillende blogs en video's geleerd hoe ik mijn eigen "beats" kan maken.  Ik leerde over <i>EQ's, FM synthesizers, granular synthesis, reverb, distortion, sidechain, audiocompressie, vocoders, ...  </i></p><br>
+      <p>Tot heden volg ik wekelijkse pianolessen. De afgelopen 2 jaar volg ik aan de muziekacademie van Tienen les van de pianist <b>Maarten Lingier</b> (zie afbeelding). Maarten is niet alleen een geweldige pianist maar ook een uitstekend goede leerkracht. Samen met hem bestudeerde we harmonisch complexere  nummers (waaronder een aantal jazz standards) en leerde hij me verschillende concepten als improvisatie, voicings, modaliteit, comping, polyritmes en akkoordsubstituties.  </p>
+  </div>
+
+  <div class="vragen" id="vraag5">
+    <h2>Welke artisten inspireren jou?</h2>
+    <!-- <p>Ik vind het belangrijk om inspiratie te halen vanuit meerdere hoeken. Daarom probeer ik in mijn muziekcollectie verschilllende genres te steken. </p> -->
+    <p>Er zijn een aantal pianisten en toetsenisten waar ik enorm naar opkijk. Een voorbeeld hiervan is de franse toetseniste Domitille Degalle (DOMi). Samen met de drummer JD Beck vormt ze een jazz duo en speelt ze solo's waar iedereen grote ogen van opzet. </p>
+    <p>In mijn omgeving zijn er ook aantal producers die mij hebben beïnvloed. Via SoundCloud ontdekte ik het Leuvense platenlabel Tangram Records en leerde ik de producers Sokoto, Poldoore en Moodprint kennen.</p><br>
+    <p>Deze kleine lijst is een ingekorte versie van artiesten die ik bewonder. </p>
+    <p><b>Pianisten:</b> Maarten Lingier, Duval Timothy, Kiefer, Alexandra Stréliski, Wouter Dewit, Cory Henry, Jean-Michel Blais, DOMi, …</p>
+    <p><b>Andere artisten & producers:</b> Mansur Brown, Flying Lotus, Blood Orange, Jacob Collier, Ludwig Göransson, Yussef Dayes, Mike Dean, Steve Reich, Thundercat, Fatima Yamaha, James Blake, Sampha, Kaytranada, Anderson paak. </p>
+    <p><b>Radiomakers & DJ's:</b> Lefto <i>(Kiosk, StuBru)</i>, Gilles Peterson <i>(BBC, Brownswood Records)</i></p>
+  </div>
+  <div class="vragen" id="vraag6">
+    <h2>Wat wil je met deze opleiding doen?</h2>
+    <p>De afgelopen jaren speelde ik de muziek van andere muzikanten en imiteerde ik mijn muzikale idolen.  Ik wil mezelf verder verdiepen in het schrijven van muziek om zo mijn eigen stijl te ontwikkelen. Vervolgens zou ik willen leren hoe ik deze muziek kan brengen op een podium.</p>
+
+  </div>
+  <!-- <div class="vragen" id="vraag6">
+    Vraag 6
+  </div> -->
+  <div class="vragen" id="vraag7">
+    <h2>Waarom wil je beginnen aan deze opleiding?</h2>
+    <p>De opleiding muzikant aan de PXL hogeschool lijkt voor mij de ideale manier om te groeien als muzikant alsook om de opgedane kennis en vaardigheden te toetsen aan de praktijk. Ik vind het belangrijk om op een creative manier muziek te maken en niet zo zeer op een "correcte" manier. Hierbij vind ik het belangrijk dat . Tijdens de opleiding wil ik ontdekken wat het is om een muzikant te zijn en wil ik mensen leren kennen die dezelfde passie delen als ik.</p>  
+  </div>
+  <div class="vragen" id="vraag8">
+    <h2>Hoe ontdek je nieuwe muziek?</h2>
+    <p>Ik maak tijd om nieuwe muziek te ontdekken. Meestal ga ik opzoek via verschillende platformen: Soundcloud, MixCloud, WhoSampled, Kiosk Radio, Boiler Room.</p>
+    <p>Wanneer ik een nieuwe nummer of artiest ontdek, deel ik deze met vrienden en ga ik vervolgens op zoek naar het verhaal achter die plaat/muzikant. Bijvoorbeeld bij hip hop nummers zoek ik meestal naar de samples die de producers hebben gebruikt. Zo staan producers als Pete Rock, J Dilla en knxwledge bekend voor het hervormen, <i>chopping</i> van samples. <br> Een van mijn ingezonde covers is een cover van het nummer Stakes is High (De La Soul).   </p>
+    <p>Op youtube volg ik verschilllende kanalen die over muziek praten. Interviews van Nardwuar, reviews van TheNeedleDrop en optredens van opkomende artisten in de COLORS studios.</p>
+  </div>
+  <div class="vragen" id="vraag9">
+    <h2>Naar welke concerten ga je?</h2>
+    <p>De corona crisis heeft me ondertussen al langer dan 1 jaar laten zitten met een concert-honger. Het afgelopen jaar heb ik enkel livestreams en opnames kunnen bekijken. Zo zal ik in april een virtueel concert bijwonen van de brusselse rapper <b>Zwangere Guy</b>.</p> <p>Voor de coronacrisis stelde ik elk semester een lijst samen met optredens in verschillende cultuurcentra's. In deze lijst zitten altijd een paar artiesten die nog onbekend zijn voor mij. Zo ervaar ik muziek op een unieke manier en ontdekte ik muzikanten als Wouter Dewit, Poltrock, Mick Jenkins. </p>
+    <p>Er zijn een aantal artiesten die ik zeker nog live zou willen zien. Als ik ooit de kans krijg zou ik zeker naar een optreden willen gaan van Frank Ocean. </p>
+    
+  </div>
+  <div class="vragen" id="vraag10">
+    <h2>Welke boeken heb je onlangs gelezen?</h2>
+    <p>Er zijn een aantal boeken die me hielpen om een beter beeld te vormen over de wereld rond muziek:</p>
+    <p><b>74 Creative Strategies for Electronic Music Producers</b> - <i>Dennis DeSantis</i></p>
+    <p>Dennis DeSantis schrijft over verschillende strategiën die je kan toepassen tijdens het maken van muziek. Dit boek boek daagde me uit om op een andere manier muziek te maken en spelen. </p>
+    <p><b>How Music Works</b> - <i>David Bryne</i></p>
+    <p>In dit boek legt David Bryne op basis van zijn eigen ervaringen uit hoe muziek werkt. Hij neemt je mee op reis naar verschillende delen van de wereld en legt je uit hoe muziek zijn vorm krijgt. Dit boek gaf mij verschillende perspectieven over de wereld van en rond muziek. </p>
+    <p><b>Twentieth-Century Harmony</b> - <i>Vincent Persichetti</i></p>
+    <p>Twentieth-Century Harmony is een boek waarin een aantal moeilijkere onderwerpen worden uitegelegd als harmonische bewegingen, transformaties, atonaliteit, polytonaliteit, chord clusters, ... Ik zal dit boek zeker nog een paar keer moeten lezen voordat ik alles begrijp.</p>
+    <p><b>Belpop Bonanza</b> - <i>Jan Delvaux</i></p>
+    <p>Dankzij het tv-programma en dit boek leerde ik veel bij over de rijke geschiedenis van de belgische muziek.</p>
+  </div>
+  <div class="vragen" id="vraag11">
+    <h2>Welke muziek heeft jou muzikaal gevormd?</h2>
+    <p>Het is moeilijk om deze vraag te beantwoorden omdat er veel muziek is die impact op me heeft gemaakt. </p>
+    <p><b>Album:</b> Blonde - <i>Frank ocean</i></p>
+    <p>Deze plaat is onverwacht uitgekomen de dag na mijn verjaardag (20 augustus). Hij bracht op 2 dagen 2 platen uit om zo uit een recorddeal te stappen. Wat ik vooral goed vind aan dit album zijn de de samenwerkingen met andere artisten en de vele verrasende momenten doorheen het album. Ik beluisterde dit album voor het eerst pas 2 jaar nadat het was uitgebracht en het is tot vandaag mijn favoriete R&B album.</p>
+    <p><b>Artiest:</b> David Bowie</p>
+    <p>Op jonge leeftijd introduceerde mijn ouders me tot de muziek van Bowie. Pas later begon ik hem te apreciëren en begrijpen. Ik bewonder hem voor zijn bedachtzame songteksten en zijn overgave aan zijn karakters (Ziggy Stardust, Major Tom, ...). David Bowie is misschien een voor de hand liggend antwoord op deze vraag. Maar wanneer je je verdiept in zijn muziek, zie je wat voor een ongelofelijke artiest hij was.</p>
+    <p><b>Optreden:</b> Mechels Orkest - <i>Thomas Tooten</i></p>
+    <!-- <p>Dit was het eerste optreden waar ik naar toe ging. Mijn toenmalige pianoleraar, <i>Thomas Tooten</i> had me uitgenodigd voor het concert. Hij is naast pianist ook een cellist in het Mechelse kamerorkest. Ik kan me herinneren dat ik onder de indruk was van hoe muzikanten met verschillende instrumenten samen muziek speelde.</p> -->
+    <p>Dit was het eerste optreden waar ik naar toe ging. Mijn toenmalige pianoleraar, <i>Thomas Tooten</i> had me uitgenodigd voor het concert. Hij is naast pianist ook een cellist in het Mechelse kamerorkest.</p>
+    <img src="./orkest.jpg" id="thomas">
+  </div>
+  <div class="vragen" id="vraag12">
+    <h2>Heb je deze website zelf gemaakt?</h2>
+    <p>Ja, Ik heb tijdens mijn opleiding toegepaste informatica meerdere web development vakken gevolgd. Deze eenvoudige website heb ik gebouwd met wat html, css en javascript code. Het heeft me toch wat tijd gekost om deze website te bouwen. <br>Deze website is niet responsive en ziet er het beste uit op grote toestellen.</p>
+    <p>De code is beschikbaar op mijn Github account <u>@TiboDeClercq</u></p>
+  </div>
+  <div class="vragen" id="vraag13">
+    <video id="myVideo" controls>
+      <source src="frank.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <!-- <div id="bio">
+      <i>Klik op de witte toets om video te starten</i>  
+    </div> -->
+    
+  </div>
+  <div class="vragen" id="vraag14">
+    <h2 id="contact">Contact info</h2>
+    <p><b>Email:</b></p>
+    <p>tibo.declercq[at]gmail.com</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- partial -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+  <script  src="./script.js"></script>
+
+  
+</body>
+</html>
