@@ -231,7 +231,7 @@ h2{
   /* background-color: pink; */
 }
 #vraag2{
-  height: 60%;
+  height: 40%;
 }
 #vraag3{
   height: 145%;
@@ -242,7 +242,9 @@ h2{
   display:block;
   margin:auto;
 }
-
+#vraag5 {
+  height: 45%;
+}
 #vraag12{
   height: 35%;
 }
@@ -263,7 +265,7 @@ h2{
   height: 35%;
 }
 #vraag8{
-  height: 55%;
+  height: 40%;
 }
 #vraag9{
   height: 55%;
@@ -281,7 +283,7 @@ h2{
   padding-left: 10px;
 }
 #vraag6{
-  height: 42%;
+  height: 40%;
 }
 #vraag11{
   height: 135%;
