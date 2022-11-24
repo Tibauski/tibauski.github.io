@@ -3,7 +3,8 @@ var fileSystem = {
   'README.md': 'Welcome to the portfolio of Tibo De Clercq\nSupported commands are:\n  - ls: list directory contents\n  - cat: concatenate and print files\n  - clear: clear the terminal screen \n',
   'contact.txt': '\nEmail: tibo.declercq[at]gmail.com \nTel: +32 488 37 99 49\nTwitter: @tibauski \nGithub: TiboDeClercq \n\n',
   'resume.pdf': 'My resume is open in a new window.\n',
-  'tools.txt': 'Hier zijn competenties uitgebreid beschreven. \n' 
+  'about.me': 'As a Cloud Engineer, I am a good problem solver and can dive deep into problems. I am continuously analysing, assessing and recommending improvements in the new or existing system infrastructure.\n',
+  'tools.txt': 'Some of my AWS, Linux, Docker, Datadog, Kibana, CI/CD Infrastructure and application, \nNetworking\nCisco Routing & switching, MiktroTik, BGP, OSPF \nProgramming: \nJava, Python, C#, Flutter, Spring, Angular \nDatabase Management:\nPostgres, Neo4j & MySQL \n' 
   };
 
 
