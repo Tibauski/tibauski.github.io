@@ -1,7 +1,7 @@
 var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}var ENTER_KEY = 13;
 var fileSystem = {
   'README.md': 'Welcome to the portfolio of Tibo De Clercq\nSupported commands are:\n  - ls: list directory contents\n  - cat: concatenate and print files\n  - clear: clear the terminal screen \n',
-  'contact.txt': '\nEmail: tibo.declercq[at]gmail.com \nTel: +32 488 37 99 49\nTwitter: @tibauski \nGithub: TiboDeClercq \n\n',
+  'contact.txt': '\nEmail: tibo.declercq[at]gmail.com \nTel: +32 488 37 99 49 \nGithub: TiboDeClercq \n\n',
   'resume.pdf': 'My resume is open in a new window.\n',
   'about.me': 'As a Cloud Engineer, I am a good problem solver and can dive deep into problems. I am continuously analysing, assessing and recommending improvements in the new or existing system infrastructure.\n',
   'tools.txt': 'Some of my AWS, Linux, Docker, Datadog, Kibana, CI/CD Infrastructure and application, \nNetworking\nCisco Routing & switching, MiktroTik, BGP, OSPF \nProgramming: \nJava, Python, C#, Flutter, Spring, Angular \nDatabase Management:\nPostgres, Neo4j & MySQL \n' 
